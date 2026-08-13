@@ -72,7 +72,7 @@ git clone https://github.com/spuuntries/dalam-ring
 cd da-ring && npm install
 
 # upgrade — pulls state from an active member, generates your keypair
-npx da-ring upgrade --ring https://your.site --url https://inviter.site
+npx da-ring upgrade --ring https://inviter.site --url https://your.site
 ```
 
 where `your.site` is your domain and `inviter.site` should be your inviter, but any active member which is aware of your existence on the ring (i.e., that they would see you when they run `npx da-ring status`) would work here.
