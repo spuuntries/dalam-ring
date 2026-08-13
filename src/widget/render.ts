@@ -1,7 +1,7 @@
-import type { RingView } from '../crdt/index.js'
-import { getNeighbors } from '../crdt/index.js'
+import type { RingView } from "../crdt/index.js";
+import { getNeighbors } from "../crdt/index.js";
 
-import { galleryImages } from './assets.js'
+import { galleryImages } from "./assets.js";
 
 const styles = `
   :host {
@@ -285,52 +285,54 @@ const styles = `
     0% { filter: blur(0px); opacity: 0.8; }
     100% { filter: blur(2px); opacity: 0.4; letter-spacing: 8px; }
   }
-`
+`;
 
-type WidgetStatus = 'loading' | 'loaded' | 'error' | 'empty'
+type WidgetStatus = "loading" | "loaded" | "error" | "empty";
 
 export function renderWidget(
   container: HTMLElement,
   view: RingView | null,
   currentUrl: string,
-  status: WidgetStatus = 'loaded',
+  status: WidgetStatus = "loaded",
 ): void {
   if (!container.shadowRoot) {
-    container.attachShadow({ mode: 'open' })
+    container.attachShadow({ mode: "open" });
   }
 
-  const root = container.shadowRoot!
+  const root = container.shadowRoot!;
 
-  if (status === 'loading') {
+  if (status === "loading") {
     root.innerHTML = `<style>${styles}</style>
-      <div class="widget"><div class="status-msg">w a k e  u p</div></div>`
-    return
+      <div class="widget"><div class="status-msg">w a k e  u p</div></div>`;
+    return;
   }
 
-  if (status === 'error') {
+  if (status === "error") {
     root.innerHTML = `<style>${styles}</style>
-      <div class="widget"><div class="status-msg">l o s t</div></div>`
-    return
+      <div class="widget"><div class="status-msg">l o s t</div></div>`;
+    return;
   }
 
-  if (status === 'empty' || !view || view.members.length === 0) {
+  if (status === "empty" || !view || view.members.length === 0) {
     root.innerHTML = `<style>${styles}</style>
-      <div class="widget"><div class="status-msg">e m p t y</div></div>`
-    return
+      <div class="widget"><div class="status-msg">e m p t y</div></div>`;
+    return;
   }
 
-  const { prev, next } = getNeighbors(view.members, currentUrl)
+  const { prev, next } = getNeighbors(view.members, currentUrl);
 
-  const memberListHtml = view.members.map(m => {
-    const isCurrent = m.url === currentUrl
-    return `<a class="member-item${isCurrent ? ' current' : ''}" href="${m.url}">
+  const memberListHtml = view.members
+    .map((m) => {
+      const isCurrent = m.url === currentUrl;
+      return `<a class="member-item${isCurrent ? " current" : ""}" href="${m.url}">
       <span class="member-url">${m.url}</span>
       <span class="member-name">${m.name}</span>
-    </a>`
-  }).join('')
+    </a>`;
+    })
+    .join("");
 
   // Always start with 'dontwaste.jpg' which is now at index 0
-  const initialIdx = 0
+  const initialIdx = 0;
 
   root.innerHTML = `
     <style>${styles}</style>
@@ -342,12 +344,12 @@ export function renderWidget(
       <div class="widget-layout">
         <div class="left-col">
           <div class="bar">
-            <a class="nav-link" href="${prev?.url || '#'}" title="${prev?.name || 'previous'}">prev</a>
+            <a class="nav-link" href="${prev?.url || "#"}" title="${prev?.name || "previous"}">prev</a>
             <div class="title-container" id="ring-title" title="toggle members">
               <div class="center">${view.name}</div>
               <div class="subtitle">webring</div>
             </div>
-            <a class="nav-link" href="${next?.url || '#'}" title="${next?.name || 'next'}">next</a>
+            <a class="nav-link" href="${next?.url || "#"}" title="${next?.name || "next"}">next</a>
           </div>
           
           <div class="carousel-container" id="carousel">
@@ -365,21 +367,23 @@ export function renderWidget(
         </div>
       </div>
     </div>
-  `
+  `;
 
-  const titleBtn = root.getElementById('ring-title')
-  const rightCol = root.getElementById('right-col')
-  const carousel = root.getElementById('carousel')
-  const carouselInner = root.getElementById('carousel-inner')
-  const carouselImg = root.getElementById('carousel-img') as HTMLImageElement
-  const nextBtn = root.getElementById('carousel-next')
+  const titleBtn = root.getElementById("ring-title");
+  const rightCol = root.getElementById("right-col");
+  const carousel = root.getElementById("carousel");
+  const carouselInner = root.getElementById("carousel-inner");
+  const carouselImg = root.getElementById("carousel-img") as HTMLImageElement;
+  const nextBtn = root.getElementById("carousel-next");
 
   // Setup Global Lightbox
-  let globalLightbox = document.getElementById('da-ring-global-lightbox')
-  let globalLightboxImg = document.getElementById('da-ring-global-lightbox-img') as HTMLImageElement
-  
+  let globalLightbox = document.getElementById("da-ring-global-lightbox");
+  let globalLightboxImg = document.getElementById(
+    "da-ring-global-lightbox-img",
+  ) as HTMLImageElement;
+
   if (!globalLightbox) {
-    const style = document.createElement('style')
+    const style = document.createElement("style");
     style.innerHTML = `
       .da-ring-lightbox {
         position: fixed;
@@ -412,76 +416,76 @@ export function renderWidget(
       .da-ring-lightbox.active img {
         transform: scale(1);
       }
-    `
-    document.head.appendChild(style)
-    
-    globalLightbox = document.createElement('div')
-    globalLightbox.id = 'da-ring-global-lightbox'
-    globalLightbox.className = 'da-ring-lightbox'
-    
-    globalLightboxImg = document.createElement('img')
-    globalLightboxImg.id = 'da-ring-global-lightbox-img'
-    globalLightboxImg.alt = 'expanded view'
-    
-    globalLightbox.appendChild(globalLightboxImg)
-    document.body.appendChild(globalLightbox)
-    
-    globalLightbox.addEventListener('click', () => {
-      globalLightbox!.classList.remove('active')
-    })
+    `;
+    document.head.appendChild(style);
+
+    globalLightbox = document.createElement("div");
+    globalLightbox.id = "da-ring-global-lightbox";
+    globalLightbox.className = "da-ring-lightbox";
+
+    globalLightboxImg = document.createElement("img");
+    globalLightboxImg.id = "da-ring-global-lightbox-img";
+    globalLightboxImg.alt = "expanded view";
+
+    globalLightbox.appendChild(globalLightboxImg);
+    document.body.appendChild(globalLightbox);
+
+    globalLightbox.addEventListener("click", () => {
+      globalLightbox!.classList.remove("active");
+    });
   }
 
   if (titleBtn && rightCol) {
-    titleBtn.addEventListener('click', () => {
-      rightCol.classList.toggle('collapsed')
-    })
+    titleBtn.addEventListener("click", () => {
+      rightCol.classList.toggle("collapsed");
+    });
   }
 
   if (carousel && carouselInner && carouselImg) {
-    let currentIdx = initialIdx
-    let isSpinning = false
+    let currentIdx = initialIdx;
+    let isSpinning = false;
 
-    carousel.addEventListener('mousemove', (e) => {
-      const rect = carousel.getBoundingClientRect()
-      const x = ((e.clientX - rect.left) / rect.width) * 100
-      const y = ((e.clientY - rect.top) / rect.height) * 100
-      carouselInner.style.setProperty('--tx', x + '%')
-      carouselInner.style.setProperty('--ty', y + '%')
-    })
+    carousel.addEventListener("mousemove", (e) => {
+      const rect = carousel.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      carouselInner.style.setProperty("--tx", x + "%");
+      carouselInner.style.setProperty("--ty", y + "%");
+    });
 
-    carousel.addEventListener('mouseleave', () => {
+    carousel.addEventListener("mouseleave", () => {
       // Reset to center smoothly when mouse leaves
-      carouselInner.style.setProperty('--tx', '50%')
-      carouselInner.style.setProperty('--ty', '50%')
-    })
+      carouselInner.style.setProperty("--tx", "50%");
+      carouselInner.style.setProperty("--ty", "50%");
+    });
 
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        if (isSpinning) return
-        isSpinning = true
-        
-        carouselInner.classList.add('spinning-out')
-        
+      nextBtn.addEventListener("click", () => {
+        if (isSpinning) return;
+        isSpinning = true;
+
+        carouselInner.classList.add("spinning-out");
+
         setTimeout(() => {
-          currentIdx = (currentIdx + 1) % galleryImages.length
-          carouselImg.src = galleryImages[currentIdx]
-          
-          carouselInner.classList.remove('spinning-out')
-          carouselInner.classList.add('spinning-in')
-          
+          currentIdx = (currentIdx + 1) % galleryImages.length;
+          carouselImg.src = galleryImages[currentIdx];
+
+          carouselInner.classList.remove("spinning-out");
+          carouselInner.classList.add("spinning-in");
+
           setTimeout(() => {
-            carouselInner.classList.remove('spinning-in')
-            isSpinning = false
-          }, 200)
-        }, 200)
-      })
+            carouselInner.classList.remove("spinning-in");
+            isSpinning = false;
+          }, 200);
+        }, 200);
+      });
     }
-    
+
     if (globalLightbox && globalLightboxImg) {
-      carouselInner.addEventListener('click', () => {
-        globalLightboxImg.src = galleryImages[currentIdx]
-        globalLightbox!.classList.add('active')
-      })
+      carouselInner.addEventListener("click", () => {
+        globalLightboxImg.src = galleryImages[currentIdx];
+        globalLightbox!.classList.add("active");
+      });
     }
   }
 }
