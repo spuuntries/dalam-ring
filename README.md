@@ -89,7 +89,7 @@ re-deploy your updated `dalaman.json`, then tell your friend to paste the widget
 <script
   src="https://your.site/dalaman-widget.html"
   data-ring="https://inviter.site,https://your.site"
-  data-ring-name="frens webring"
+  data-ring-name="dalam(an)"
 ></script>
 ```
 
