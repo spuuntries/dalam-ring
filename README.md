@@ -1,27 +1,21 @@
 <p align="center">
-  <img src="logo.png" alt="da-ring" width="250" style="margin: -5em" />
+  <img src="logo.png" alt="da-ring" width="250"  style="border-radius: 1em" />
 </p>
 
-<h1 align="center">da-ring</h1>
+<h1 align="center">dalam-ring</h1>
 
 <p align="center">
-  <em>a decentralized webring with no central server</em><br/>
-  <sub>membership via CRDT · browser-side gossip · invite tree governance</sub>
+  <em>a decentralized webring for dalam(an) — based on <a href="https://github.com/spuuntries/da-ring"><code>da-ring</code></a></em><br/>
+  <sub>degenerate ahh group of ppl</sub>
 </p>
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-a78bfa" />
-  <img alt="node" src="https://img.shields.io/badge/node-18+-8b5cf6" />
-  <img alt="bundle" src="https://img.shields.io/badge/widget-23KB-c4b5fd" />
+  <img alt="Online Degens" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Fguilds%2F1371681157762252861%2Fwidget.json&query=%24.presence_count&label=Online%20Degens&color=23a559&style=for-the-badge&logo=discord&logoColor=white" />
+  <img alt="Total Members" src="https://img.shields.io/badge/Total_Members-21-80848e?style=for-the-badge" />
+  <img alt="Established" src="https://img.shields.io/date/1747104672?label=Established&color=5865F2&style=for-the-badge" />
 </p>
 
 ---
-
-**fork this repo to create your own ring.**
-
-## example
-
-check out [`keks-ring`](https://github.com/spuuntries/keks-ring) for a live example of a webring built with da-ring! it's currently running at [spuun.art](https://spuun.art/).
 
 ## why
 
@@ -51,124 +45,96 @@ most friends just need to be passive. the genesis member (you) is always active.
 
 ## quick start
 
-### 1. fork & configure
+> [!note]
+> Since this is alrd a set up ring, it's either that you've been invited, or you want to upgrade to an active member to invite others.
 
-fork [`spuuntries/da-ring`](https://github.com/spuuntries/da-ring) on github, or click **Use this template** to create your own repo. then:
+### 1. you've been invited
 
-```bash
-# ↓ change this to your repo's URL
-git clone https://github.com/your-username/your-repo-name
-cd your-repo-name
-npm install
-```
-
-edit [`ring.config.ts`](ring.config.ts):
-
-```typescript
-export default {
-  name: "frens webring",
-  inviteBudget: 2, // invites per member
-};
-```
-
-### 2. initialize your ring
-
-```bash
-npx da-ring init --url https://your.site
-```
-
-this generates:
-
-- **`frens-webring.json`** — deploy to your site root
-- **`.da-ring/keys.json`** — your keypair _(gitignored, keep safe!)_
-
-also add the widget to your own site:
+Your friend's gonna give you a widget snippet like this:
 
 ```html
 <script
-  src="https://your.site/widget.js"
-  data-ring="https://your.site"
-  data-ring-name="frens webring"
+  src="https://friend.site/dalaman-widget.html"
+  data-ring="https://friend.site"
+  data-ring-name="dalam(an)"
 ></script>
 ```
 
-> host the built `dist/index.widget.js` on your site or a CDN. here it's been renamed as `widget.js` for simplicity, but you can rename the file into whatever, just change it in the `src` field when you're embedding the widget.
+replace `friend.site` with your friend's domain.
 
-### 3. invite friends
+### 2. you wanna invite people
 
-```bash
-npx da-ring invite https://friend.site --name "friend"
-```
-
-re-deploy your updated `frens-webring.json`, then tell your friend to paste the widget:
-
-```html
-<script
-  src="https://your.site/widget.js"
-  data-ring="https://your.site"
-  data-ring-name="frens webring"
-></script>
-```
-
-### 4. build (only after edits)
-
-`npm install` auto-builds everything. you only need to rebuild manually if you change the widget styles or ring config:
+If you wanna invite new people to the ring, you gotta upgrade first into an active member. This way, you also host an instance of the ring on your site and people can query to you for the ring's state.
 
 ```bash
-npm run build
-```
-
-outputs `dist/index.widget.js` — self-contained widget bundle (~23KB).
-
-### 5. upgrading (passive → active)
-
-a passive member who wants to start inviting people:
-
-```bash
-# clone the ring owner's fork (not the upstream template)
-git clone https://github.com/ring-owner/da-ring
+# clone this repo
+git clone https://github.com/spuuntries/dalam-ring
 cd da-ring && npm install
 
 # upgrade — pulls state from an active member, generates your keypair
-npx da-ring upgrade --ring https://alice.site --url https://your.site
+npx da-ring upgrade --ring https://your.site --url https://inviter.site
 ```
 
-this generates their own `frens-webring.json` + keypair. deploy both `frens-webring.json` and the widget to your site:
+where `your.site` is your domain and `inviter.site` should be your inviter, but any active member which is aware of your existence on the ring (i.e., that they would see you when they run `npx da-ring status`) would work here.
+
+Then, say you're inviting `other friend`,
+
+```bash
+npx da-ring invite https://other-friend.site --name "other friend"
+```
+
+re-deploy your updated `dalaman.json`, then tell your friend to paste the widget:
 
 ```html
-<!-- add this to your site too -->
 <script
-  src="https://your.site/widget.js"
-  data-ring="https://alice.site,https://your.site"
+  src="https://your.site/dalaman-widget.html"
+  data-ring="https://inviter.site,https://your.site"
   data-ring-name="frens webring"
 ></script>
 ```
 
-now you're active — can invite others and contribute to ring redundancy. note the `data-ring` lists multiple bootstrap URLs for better resilience.
+then, host the built `dist/index.widget.html` on your site or a CDN. here it's been renamed as `dalaman-widget.html` for simplicity, but you can rename the file into whatever, just change it in the `src` field when you're embedding the widget.
 
-## hosting & cors
+## hosting & cors & polyglot
 
 because the webring works by having browsers fetch `<ring-name>.json` from other members' domains, **your web server MUST be configured to send CORS headers** (`Access-Control-Allow-Origin: *`) for the json file.
 
-- **github pages**: usually enables this by default.
-- **vercel / netlify**: you must add a `vercel.json` or `netlify.toml` file to your site's root to explicitly add the headers.
+additionally, if you want your widget script link to generate a **Discord rich embed**, you must use the `widget.html` polyglot. however, browsers will refuse to execute `.html` files as scripts if your server sends the `X-Content-Type-Options: nosniff` header.
+
+you have two options for embedding the widget:
+
+- **Option A (Discord Rich Embed)**: host the file as `widget.html`.
+  - **github pages**: usually enables CORS by default and _does not_ send `nosniff`, so this works out of the box!
+  - **vercel / netlify**: these hosts send `nosniff` by default. you must add a `vercel.json` or `netlify.toml` file to explicitly add CORS headers and remove `nosniff`.
+- **Option B (Standard Script, no Discord embed)**: rename the built file to `widget.js` and use `<script src=".../widget.js">`. this works everywhere without worrying about `nosniff`, but you lose the Discord embed preview.
+
 - **domain redirects**: if your host automatically redirects your naked domain to `www` (or vice versa), the 308 redirect response often drops custom CORS headers, breaking the fetch. to fix this, ensure the URLs in your `data-ring` script tag point directly to your primary non-redirecting domain.
 
-example `vercel.json` for vercel users (replace `frens-webring.json` with your ring's filename):
+example `vercel.json` for vercel users (replace `dalaman-widget.html` with the filename if you've renamed it):
 
 ```json
 {
   "headers": [
     {
-      "source": "/frens-webring.json",
+      "source": "/dalaman.json",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
       ]
+    },
+    {
+      "source": "/dalaman-widget.html",
+      "headers": [{ "key": "X-Content-Type-Options", "value": "" }]
     }
   ]
 }
 ```
+
+### meta tags & link previews
+
+the HTML polyglot embeds standard Open Graph (`og:image`) and Twitter Card meta tags to display a nice preview image when you link your widget on social media platforms like Discord, Twitter, and Slack.
+
+because social media scrapers do not support base64-encoded images, the widget's meta tags reference a file named `dontwaste.jpg` on root. if you want image previews to work, you must host said banner image. if you don't care about the preview image, you can simply ignore this, the thing will work just fine.
 
 ## cli
 
@@ -183,18 +149,6 @@ all commands: `npx da-ring <command>`
 | **`upgrade`** `--ring <url> --url <url>` | passive → active                                           |
 | **`sync`**                               | pull state from active peers                               |
 | **`status`**                             | show ring info and invite tree                             |
-
-**`status` output:**
-
-```
-✦ frens ring (3 members)
-
-  you: https://alice.site (0/2 invite slots)
-
-  https://alice.site (genesis, active) [0/2]
-  ├── https://bob.site bob (passive)
-  └── https://carol.site carol (passive)
-```
 
 ## the crdt
 

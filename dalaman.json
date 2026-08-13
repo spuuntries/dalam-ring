@@ -1,0 +1,198 @@
+[
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786608222406,
+    "seen": [
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92"
+    ],
+    "payload": {
+      "target": "https://gh.spuun.art",
+      "name": "spuun gh pages"
+    },
+    "id": "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+    "sig": "2a847b9aa65b8ecd20ae046f033554cdabf5aca54aae5f62262fb6c9a0d7fd73a41b2e5551a691b930fff0d3bc997897626f77a0ef9282e294d6c46ab3e8d10f"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786625535083,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4220108d08c0ee686282fe260741f889578cb63aac9503ee40a85d89fbc14b6e",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "5c271eba04468e8eca772a051c091a03cb006fb9a968670c9fbd921d45584cbc",
+      "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50",
+      "fb6eaf80264fc1f6a7db183c29736a616c9c895013c027bd67f4f5870c466803"
+    ],
+    "payload": {
+      "target": "https://alfiwillianz.my.id/",
+      "name": "alfi"
+    },
+    "id": "3889b46a7d8444507a3fdc8c7608bc2db810a18dbd8aa92a34400ca02c994126",
+    "sig": "c252721a2de5c7ceff9c0d83515f1d45cce13b6c83d7c0dc920ac7f6a9fe9bc33eac3fe291f10a4ea35239ceebffa0b00000fd9ea22e138265179558d1d3990e"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786625563186,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "3889b46a7d8444507a3fdc8c7608bc2db810a18dbd8aa92a34400ca02c994126",
+      "4220108d08c0ee686282fe260741f889578cb63aac9503ee40a85d89fbc14b6e",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "5c271eba04468e8eca772a051c091a03cb006fb9a968670c9fbd921d45584cbc",
+      "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50",
+      "fb6eaf80264fc1f6a7db183c29736a616c9c895013c027bd67f4f5870c466803"
+    ],
+    "payload": {
+      "target": "https://kekbot.spuun.art/",
+      "name": "kekbot"
+    },
+    "id": "3eddac652c3444219400346725c8d9ca122680d30734b9bd14b8881ee5081f47",
+    "sig": "b48065455f6511c7d4fb9183c041b1213cd4f244a4ede5060dd74a4b0f10f56d0a1c4cc139a6562b5e5c21ee0921467dbda398920d3b70d10918c1145644850f"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786621190721,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50"
+    ],
+    "payload": {
+      "target": "https://abdanhafidz.com/",
+      "name": "abdan"
+    },
+    "id": "4220108d08c0ee686282fe260741f889578cb63aac9503ee40a85d89fbc14b6e",
+    "sig": "c777667da43e764ab871ee9fe2b6e7f28a1986804337005f8d044b5c158c5249ae48bddad32b7f230db581e94125d6ddbae10f6be20ba33346dd99d5cf81cf03"
+  },
+  {
+    "type": "key-claim",
+    "author": "https://spuun.art",
+    "timestamp": 1786598614437,
+    "seen": [
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92"
+    ],
+    "payload": {
+      "pubkey": "5ecb9e8d912ebee8730a04465bee9d5528d697b74897221f124d2800d0547c49"
+    },
+    "id": "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+    "sig": "13b773b44091e108e17a039ad82020563c593e579f2744f9a0db24db2f3ea14d24ff6b7043d4b1aa45b8f21a42438e882e7ba85d5f3d28d371a8f06c09d30a0b"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786621627473,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4220108d08c0ee686282fe260741f889578cb63aac9503ee40a85d89fbc14b6e",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50"
+    ],
+    "payload": {
+      "target": "https://farhan-wicaksono.me/",
+      "name": "wew"
+    },
+    "id": "5c271eba04468e8eca772a051c091a03cb006fb9a968670c9fbd921d45584cbc",
+    "sig": "03ba184d4934de99d10061a7748e1545ffdc23d9e493c3075de127f2e63c0598ac359296f1845e7c73d1b7f3b934e3c36a68332aaf05ee4e2de2ad90d5b23305"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786617258403,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50"
+    ],
+    "payload": {
+      "target": "https://imdipo.github.io/",
+      "name": "imdipo"
+    },
+    "id": "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+    "sig": "04ad1c3f62fc0e7fa2b2215ca3736d2c466891fdbf9923b9487dd3e420a265fd3c7d3a3a3d369961cb7bc28bfa3aa76382050ba334d449c943fb10abf61f0403"
+  },
+  {
+    "type": "add",
+    "author": "https://spuun.art",
+    "timestamp": 1786616846596,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50"
+    ],
+    "payload": {
+      "target": "https://alfi.is-a.dev/",
+      "name": "alfi"
+    },
+    "id": "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+    "sig": "6cc456141c459d678e555e599b75dfad92b632117e257ec29ccef9f5c6e966f0221bbdd22afb519b8027c20ceab57c132f48db39ec1288fcd1781cc887a50606"
+  },
+  {
+    "type": "genesis",
+    "author": "https://spuun.art",
+    "timestamp": 1786598614435,
+    "seen": [],
+    "payload": {
+      "name": "dalam(an)",
+      "inviteBudget": 10
+    },
+    "id": "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+    "sig": "778eaf4a54994f76947e4e54be6149e3bd5b353261232dba0a6b0ac4c5eca7c7306bbc8c77608364d98a8499708779166614a7ae49df7ada69cc1063fff27e07"
+  },
+  {
+    "type": "revoke",
+    "author": "https://spuun.art",
+    "timestamp": 1786608324434,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92"
+    ],
+    "payload": {
+      "target": "https://gh.spuun.art",
+      "reparent": false
+    },
+    "id": "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50",
+    "sig": "ac3432d0bc7f8100b3f8a0c783c1746180fc29d245038badfa09880d516c0b8e31cb682fb8bf23e20453377a428cd11ed0000f5ece4dc813d6c055375e13c608"
+  },
+  {
+    "type": "revoke",
+    "author": "https://spuun.art",
+    "timestamp": 1786625506273,
+    "seen": [
+      "263b54bd6f975f35925c49aa4f43b70b3a7d8a4695e4d800162f476f4465a7d8",
+      "4220108d08c0ee686282fe260741f889578cb63aac9503ee40a85d89fbc14b6e",
+      "4f8e4d43994ac1f94ffd79ec961eb65f0ccd66779efdb659c4f4038a6db583d2",
+      "5c271eba04468e8eca772a051c091a03cb006fb9a968670c9fbd921d45584cbc",
+      "85d0ab85437af1b1d694844e4a40d621c97603fcd0261b84deb7085405ad9c6f",
+      "9bdd68ca3d681e7e518215fa7707a65e394c0d72f5044097e7aaf3ca686f5955",
+      "e860fdbc61c2020e4d469325098f2924764f8fb6ed391acb18335093518cad92",
+      "f7e314d642ee6b8d5a8e6434285efa3cb9687747f884a61e82ca2b9e6aeabd50"
+    ],
+    "payload": {
+      "target": "https://alfi.is-a.dev/",
+      "reparent": false
+    },
+    "id": "fb6eaf80264fc1f6a7db183c29736a616c9c895013c027bd67f4f5870c466803",
+    "sig": "bd4d7fe4a916e83c918343deee7b524a327beace1238890375fa7d917396e5f76811e9c14b4f48121566e8cfeadb325a597a8f1db332f4e79ca9c4777c8a5d0c"
+  }
+]

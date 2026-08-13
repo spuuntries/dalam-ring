@@ -8,6 +8,7 @@
     "da-ring": "dist/cli/index.js"
   },
   "scripts": {
+    "prebuild": "node scripts/gen-assets.js",
     "build": "tsup",
     "prepare": "tsup",
     "build:widget": "tsup src/widget/index.ts --format iife --global-name DaRing --minify --outDir dist",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "sharp": "^0.35.3",
     "tsup": "^8.5.0",
     "tsx": "^4.19.0",
     "typescript": "^5.8.0"
